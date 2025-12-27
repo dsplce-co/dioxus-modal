@@ -2,6 +2,8 @@
 name = "dioxus-modal-macros"
 version = "0.1.1"
 edition = "2024"
+description = "Macros for dioxus-modal"
+license = "MIT OR Apache-2.0"
 
 [lib]
 proc-macro = true
