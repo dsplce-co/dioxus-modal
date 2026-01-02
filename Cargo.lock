@@ -662,7 +662,7 @@ name = "dioxus-modal"
 version = "0.1.1"
 dependencies = [
  "dioxus",
- "dioxus-modal-macros 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "dioxus-modal-macros 0.1.1",
  "dioxus-transition",
  "gloo",
  "tracing",
@@ -673,6 +673,8 @@ dependencies = [
 [[package]]
 name = "dioxus-modal-macros"
 version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aaea050def9602eccab99c6c87c998e83322a7c4e9038fd770ba464a695c41d7"
 dependencies = [
  "quote",
  "syn",
@@ -680,9 +682,7 @@ dependencies = [
 
 [[package]]
 name = "dioxus-modal-macros"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aaea050def9602eccab99c6c87c998e83322a7c4e9038fd770ba464a695c41d7"
+version = "0.1.2"
 dependencies = [
  "quote",
  "syn",
