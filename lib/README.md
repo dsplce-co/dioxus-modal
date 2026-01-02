@@ -25,7 +25,7 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-dioxus-modal = "0.1.1"
+dioxus-modal = "0.1.2"
 ```
 
 This crate requires Rust 2024 edition and is compatible with Dioxus 0.6.
