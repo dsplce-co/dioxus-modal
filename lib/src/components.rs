@@ -7,6 +7,7 @@ use dioxus_transition::prelude::*;
 
 #[component]
 pub fn ModalCollector() -> Element {
+    #[cfg(not(feature = "ssr"))]
     use_window_keydown(move |event| {
         if event.key() == "Escape" {
             close();
