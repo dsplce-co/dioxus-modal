@@ -25,10 +25,10 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-dioxus-modal = "0.2"
+dioxus-modal = "0.3"
 ```
 
-This crate requires Rust 2024 edition and is compatible with Dioxus 0.6.
+This crate requires Rust 2024 edition and Dioxus version 0.7. Check the [compatibility table](#compatibility-with-dioxus-versions) for other supported Dioxus versions.
 
 ### Fullstack applications
 
@@ -243,6 +243,15 @@ modal.open(())
 - **Overlay**: Semi-transparent backdrop with proper positioning
 - **Responsive**: Full viewport coverage with centered content
 - **Transitions**: Built-in smooth enter/leave modal transitions
+
+⸻
+
+## Compatibility with Dioxus versions
+
+| Dioxus version | `dioxus-modal` version |
+|:---------------|:-----------------------|
+| `0.7`          | `0.3`                  |
+| `0.6`          | `0.2`                  |
 
 ⸻
 

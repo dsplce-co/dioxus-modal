@@ -1,5 +1,6 @@
 use crate::MODAL;
 use crate::abstracts::Modal;
+use crate::dioxus_core::use_hook_with_cleanup;
 use crate::fns::close;
 use dioxus::prelude::*;
 use std::{cell::RefCell, ops::Deref, rc::Rc};
