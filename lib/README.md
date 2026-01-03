@@ -25,10 +25,21 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-dioxus-modal = "0.1.2"
+dioxus-modal = "0.2"
 ```
 
 This crate requires Rust 2024 edition and is compatible with Dioxus 0.6.
+
+### Fullstack applications
+
+You need to enable the crate's SSR feature on the server for fullstack apps. In your `Cargo.toml`:
+
+```toml
+[features]
+server = ["dioxus/server", "dioxus-modal/ssr"]
+```
+
+This will tell `dioxus-modal` and its dependencies not to perform DOM-related operations at the stage of server side rendering.
 
 ⸻
 
@@ -38,27 +49,15 @@ This crate requires Rust 2024 edition and is compatible with Dioxus 0.6.
 
 Add the `ModalCollector` component to your app to enable rendering modals.
 
-For client-side rendered (CSR) applications, you may need to ensure the collector is only rendered after hydration:
-
 ```rust
 use dioxus::prelude::*;
 use dioxus_modal::prelude::*;
 
 #[component]
 fn App() -> Element {
-    let mut csr = use_signal(|| false);
-
-    use_effect(move || {
-        if !csr() {
-            csr.set(true);
-        }
-    });
-
     rsx! {
-        if csr() {
-            Router::<Route> {}
-            ModalCollector {}
-        }
+        Router::<Route> {}
+        ModalCollector {}
     }
 }
 ```
